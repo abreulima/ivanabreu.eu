@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Names to scroll
-names=("prondina" "jemoreir" "jdiniz-c")
+names=("prondina" "jemoreir" "jdiniz-c" "myivanov" "dremez" "thasousa" "mmarceli" "rupinto-" "mlucena" "lgribble" "hfranco")
 
 # Scroll names
 clear
