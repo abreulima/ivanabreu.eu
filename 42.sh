@@ -15,11 +15,6 @@ echo -e "\n"
 echo "🙏 Thank you for being amazing! 🙏"
 sleep 1
 
-# Scroll names again
-for name in "${names[@]}"; do
-    echo -n "$name "
-    sleep 0.5
-done
 echo -e "\n"
 
 # Another thankful message
