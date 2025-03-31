@@ -1,0 +1,273 @@
+<!doctype html>
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    lang="pt"
+    xml:lang="pt"
+    >
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+                <meta name="author" content="Ivan Abreu" />
+                   <title>Configuração do Módulo APC220</title>
+                <link rel="stylesheet" href="src/reset.css" />
+                <link rel="stylesheet" href="src/index.css" />
+              </head>
+    <body>
+        
+        <table class="header">
+            <tr>
+                <td colspan="2" rowspan="2" class="width-auto">
+                    <h1 class="title">Configuração do Módulo APC220</h1>
+                    <span class="subtitle"></span>
+                </td>
+                <th>Version</th>
+                <td class="width-min">v0.1.5</td>
+            </tr>
+            <tr>
+                <th>Updated</th>
+                <td class="width-min">
+                    <time style="white-space: pre">2025-03-31</time>
+                </td>
+            </tr>
+            <tr>
+                <th class="width-min">author</th>
+                <td class="width-auto">
+                    <a href="https://ivanabreu.eu"><cite>Ivan
+Abreu</cite></a>
+                </td>
+                <th class="width-min">License</th>
+                <td>MIT</td>
+            </tr>
+        </table>
+        <label class="debug-toggle-label"
+            ><input type="checkbox" class="debug-toggle" /> Debug mode</label
+        >
+                 <nav id="TOC" role="doc-toc">
+                        <h2 id="toc-title">Conteúdo</h2>
+             <ul class="incremental">
+<li><a href="#prólogo" id="toc-prólogo">Prólogo</a></li>
+<li><a href="#introdução" id="toc-introdução">Introdução</a></li>
+<li><a href="#noções-básicas" id="toc-noções-básicas">Noções
+Básicas</a></li>
+<li><a href="#requerimentos"
+id="toc-requerimentos">Requerimentos</a></li>
+<li><a href="#configuração" id="toc-configuração">Configuração</a></li>
+<li><a href="#montagem" id="toc-montagem">Montagem</a></li>
+</ul>
+        </nav>
+         <h2 id="prólogo">Prólogo</h2>
+<p>Está página é derivada de uma aula com o objetivo de configurar o
+módulo APC220.</p>
+<h2 id="introdução">Introdução</h2>
+<p>O APC220 é um dispositivo de comunicação sem fio capaz de transmitir
+e receber dados através de ondas electromagnéticas.</p>
+<p>A configuração do módulo é, geralmente, feita através do aplicativo
+RF Magic Software, sugerido pelo datasheet. No entanto, devido a algumas
+instabilidades presente na aplicação usaremos um método alternativo.</p>
+<h2 id="noções-básicas">Noções Básicas</h2>
+<table>
+<thead>
+<tr>
+<th class="width-min">
+Característica
+</th>
+<th class="width-auto">
+Valores
+</th>
+<th class="width-min">
+Valor Padrão
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Taxa UART (bps)
+</td>
+<td>
+1200, 2400, 4800, 9600, 19200, 38400 e 57600
+</td>
+<td>
+9600
+</td>
+</tr>
+<tr>
+<td>
+Paridade Serial
+</td>
+<td>
+Desativada, Paridade Par, Paridade Ímpar
+</td>
+<td>
+Desativada
+</td>
+</tr>
+<tr>
+<td>
+Frequência
+</td>
+<td>
+418 MHz até 455 MHz
+</td>
+<td>
+Desativada
+</td>
+</tr>
+<tr>
+<td>
+Taxa de Transmissão no Ar (bps)
+</td>
+<td>
+2400, 4800, 9600 e 19200
+</td>
+<td>
+9600
+</td>
+</tr>
+<tr>
+<td>
+Potência de RF
+</td>
+<td>
+0 - 9
+</td>
+<td>
+9
+</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>
+Notas
+</summary>
+<p>
+Apenas é possível alterar a frequência em passos de 1KHz.
+</p>
+<p>
+A potência 9 presenta 20mW.
+</p>
+</details>
+<h2 id="requerimentos">Requerimentos</h2>
+<ul class="incremental">
+<li>2x Módulo APC220</li>
+<li>Conversor USB/UART</li>
+<li>Placa de Desenvolvimento Arduino</li>
+</ul>
+<p>Ambos os módulos devem ser configurados da mesma maneira para
+realizarem a comunicação entre si.</p>
+<h2 id="configuração">Configuração</h2>
+<p>A configuração consiste de enviar para o módulo ACP220 alguns bytes
+em um formato específico contendo as seguinte informações em ASCII, com
+uma taxa UART de 9600bps.</p>
+<p>Para entrar no modo de configuração, o pino <strong>SET</strong> deve
+está em baixo tensão.</p>
+<blockquote>
+<p>WR_Frêquencia_Taxa de Transmissão no Ar_Potência de RF_Taxa
+UART_Paridade Serial↲</p>
+</blockquote>
+<p>Apesar de parecer intuito enviar os valores reais que queremos, e
+necessário enviar os dados conforme a tabela abaixo.</p>
+<table>
+<thead>
+<tr>
+<th class="width-min">
+Parâmetro
+</th>
+<th class="width-auto">
+Bytes
+</th>
+<th class="width-min">
+Instrução
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Frequência
+</td>
+<td>
+6
+</td>
+<td>
+6 primeiros digito da frequencia desejada. Exemplo 435,4MHZ é 435400.
+</td>
+</tr>
+<tr>
+<td>
+Taxa de Transmissão no Ar
+</td>
+<td>
+1
+</td>
+<td>
+1, 2, 3 e 4 referem-se à 2400, 4800, 9600 e 19200 bps respectivamente.
+</td>
+</tr>
+<tr>
+<td>
+Potência de RF
+</td>
+<td>
+1
+</td>
+<td>
+0 a 9, onde 9 é o máximo.
+</td>
+</tr>
+<tr>
+<td>
+Taxa UART
+</td>
+<td>
+1
+</td>
+<td>
+1, 2, 3, 4, 5 and 6 referem-se à 1200, 2400, 4800, 9600, 19200, 38400 e
+57600 bps respectivamente.
+</td>
+</tr>
+<tr>
+<td>
+Paridade Serial
+</td>
+<td>
+1
+</td>
+<td>
+0 desativada, 1 paridade par e 0 paridade ímpar.
+</td>
+</tr>
+</tbody>
+</table>
+<p>Exemplo de Configuração</p>
+<ul class="incremental">
+<li><strong>Frequência</strong>: 455250000 Hz (455.25 MHz)</li>
+<li><strong>Taxaa de Transmissão no Ar</strong>: 4800 bps</li>
+<li><strong>Potência</strong>: Máxima (9)</li>
+<li><strong>Taxa UART</strong>: 9600 bps</li>
+<li><strong>Paridade Serial</strong>: Desativada</li>
+</ul>
+<p>Deve-se enviar o seguindo comando via UART, acrescido por um
+<strong>line feed</strong> (LF).</p>
+<blockquote>
+<p>WR_455250_2_9_4_0</p>
+</blockquote>
+<p>O dispositivo deverá com uma confirmação.</p>
+<blockquote>
+<p>PARA_455250_2_9_4_0</p>
+</blockquote>
+<h2 id="montagem">Montagem</h2>
+<p>Conecte o pino <strong>RX* do módulo no pino 10 do Arduino, e o
+</strong>TX** no pino 11, e o pino <strong>SET</strong> no pino 12.</p>
+<p>Descarregue o projeto <strong>ACP220-Config</strong>, e o transfira
+para o Arduino.</p> 
+        <div class="debug-grid"></div>
+        <script src="src/index.js"></script>
+    </body>
+</html>
