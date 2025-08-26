@@ -1,0 +1,261 @@
+o Cube
+
+v  1.000000  1.000000 -1.000000   1.0 0.0 0.0   # red
+v  1.000000 -1.000000 -1.000000   1.0 0.0 0.0   # green
+v  1.000000  1.000000  1.000000   1.0 0.0 1.0   # blue
+v  1.000000 -1.000000  1.000000   1.0 1.0 0.0   # yellow
+v -1.000000  1.000000 -1.000000   0.0 1.0 1.0   # cyan
+v -1.000000 -1.000000 -1.000000   1.0 0.0 1.0   # magenta
+v -1.000000  1.000000  1.000000   1.0 0.5 0.0   # orange
+v -1.000000 -1.000000  1.000000   0.5 0.0 1.0   # violet
+
+vn -0.0000 1.0000 -0.0000
+vn -0.0000 -0.0000 1.0000
+vn -1.0000 -0.0000 -0.0000
+vn -0.0000 -1.0000 -0.0000
+vn 1.0000 -0.0000 -0.0000
+vn -0.0000 -0.0000 -1.0000
+
+vt 0.875000 0.500000
+vt 0.625000 0.750000
+vt 0.625000 0.500000
+vt 0.375000 1.000000
+vt 0.375000 0.750000
+vt 0.625000 0.000000
+vt 0.375000 0.250000
+vt 0.375000 0.000000
+vt 0.375000 0.500000
+vt 0.125000 0.750000
+vt 0.125000 0.500000
+vt 0.625000 0.250000
+vt 0.875000 0.750000
+vt 0.625000 1.000000
+
+s 0
+
+f 5/1/1 3/2/1 1/3/1
+f 3/2/2 8/4/2 4/5/2
+f 7/6/3 6/7/3 8/8/3
+f 2/9/4 8/10/4 6/11/4
+f 1/3/5 4/5/5 2/9/5
+f 5/12/6 2/9/6 6/7/6
+f 5/1/1 7/13/1 3/2/1
+f 3/2/2 7/14/2 8/4/2
+f 7/6/3 5/12/3 6/7/3
+f 2/9/4 4/5/4 8/10/4
+f 1/3/5 3/2/5 4/5/5
+f 5/12/6 1/3/6 2/9/6
+# Blender 4.5.2 LTS
+# www.blender.org
+o Icosphere
+v 0.000000 -1.000000 0.000000
+v 0.723600 -0.447215 0.525720
+v -0.276385 -0.447215 0.850640
+v -0.894425 -0.447215 0.000000
+v -0.276385 -0.447215 -0.850640
+v 0.723600 -0.447215 -0.525720
+v 0.276385 0.447215 0.850640
+v -0.723600 0.447215 0.525720
+v -0.723600 0.447215 -0.525720
+v 0.276385 0.447215 -0.850640
+v 0.894425 0.447215 0.000000
+v 0.000000 1.000000 0.000000
+vn 0.1876 -0.7947 0.5774
+vn 0.6071 -0.7947 -0.0000
+vn -0.4911 -0.7947 0.3568
+vn -0.4911 -0.7947 -0.3568
+vn 0.1876 -0.7947 -0.5774
+vn 0.9822 -0.1876 -0.0000
+vn 0.3035 -0.1876 0.9342
+vn -0.7946 -0.1876 0.5774
+vn -0.7946 -0.1876 -0.5774
+vn 0.3035 -0.1876 -0.9342
+vn 0.7946 0.1876 0.5774
+vn -0.3035 0.1876 0.9342
+vn -0.9822 0.1876 -0.0000
+vn -0.3035 0.1876 -0.9342
+vn 0.7946 0.1876 -0.5774
+vn 0.4911 0.7947 0.3568
+vn -0.1876 0.7947 0.5774
+vn -0.6071 0.7947 -0.0000
+vn -0.1876 0.7947 -0.5774
+vn 0.4911 0.7947 -0.3568
+vt 0.181819 0.000000
+vt 0.272728 0.157461
+vt 0.090910 0.157461
+vt 0.363637 0.000000
+vt 0.454546 0.157461
+vt 0.909091 0.000000
+vt 1.000000 0.157461
+vt 0.818182 0.157461
+vt 0.727273 0.000000
+vt 0.636364 0.157461
+vt 0.545455 0.000000
+vt 0.363637 0.314921
+vt 0.181819 0.314921
+vt 0.909091 0.314921
+vt 0.727273 0.314921
+vt 0.545455 0.314921
+vt 0.000000 0.314921
+vt 0.272728 0.472382
+vt 0.090910 0.472382
+vt 0.818182 0.472382
+vt 0.636364 0.472382
+vt 0.454546 0.472382
+s 0
+f 1/1/1 2/2/1 3/3/1
+f 2/2/2 1/4/2 6/5/2
+f 1/6/3 3/7/3 4/8/3
+f 1/9/4 4/8/4 5/10/4
+f 1/11/5 5/10/5 6/5/5
+f 2/2/6 6/5/6 11/12/6
+f 3/3/7 2/2/7 7/13/7
+f 4/8/8 3/7/8 8/14/8
+f 5/10/9 4/8/9 9/15/9
+f 6/5/10 5/10/10 10/16/10
+f 2/2/11 11/12/11 7/13/11
+f 3/3/12 7/13/12 8/17/12
+f 4/8/13 8/14/13 9/15/13
+f 5/10/14 9/15/14 10/16/14
+f 6/5/15 10/16/15 11/12/15
+f 7/13/16 11/12/16 12/18/16
+f 8/17/17 7/13/17 12/19/17
+f 9/15/18 8/14/18 12/20/18
+f 10/16/19 9/15/19 12/21/19
+f 11/12/20 10/16/20 12/22/20
+# Blender 4.5.2 LTS
+# www.blender.org
+o Plane
+v -3.000000 0.000000 3.000000
+v 3.000000 0.000000 3.000000
+v -3.000000 0.000000 -3.000000
+v 3.000000 0.000000 -3.000000
+vn -0.0000 1.0000 -0.0000
+vt 1.000000 0.000000
+vt 0.000000 1.000000
+vt 0.000000 0.000000
+vt 1.000000 1.000000
+s 0
+f 2/1/1 3/2/1 1/3/1
+f 2/1/1 4/4/1 3/2/1
+#version 300 es
+
+precision mediump float;
+
+layout(location = 0) out vec3 gColor;
+layout(location = 1) out vec3 gNormal;
+
+in vec3 FragPos;
+in vec3 Normal;
+in vec2 TexCoord;
+in vec3 VertexColor;
+
+uniform sampler2D image;
+
+void main()
+{
+	gColor = vec3(1.0, 0.0, 1.0);
+	vec3 normal = normalize(Normal);
+	gNormal = normal * 0.5 + 0.5;
+	gColor = VertexColor;
+}#version 300 es
+
+precision mediump float;
+
+uniform sampler2D g_color;
+uniform sampler2D g_normal;
+uniform sampler2D g_depth;
+
+uniform float nearPlane;
+uniform float farPlane;
+
+out vec4 FragColor;
+in vec2 TexCoord;
+
+float linear_depth(float depth, float nearPlane, float farPlane)
+{
+    return 1.0 - (depth - nearPlane) / (farPlane - nearPlane); // ortho
+}
+
+vec3 GetNormal(vec2 uv, sampler2D normalTexture)
+{
+    vec3 normal = texture(normalTexture, uv).rgb;
+    //ec3 normal = texture2DAA(normalTexture, uv).rgb;
+    normal = normal * 2.0 - 1.0;
+    return normal;
+}
+
+float normal_edges_bias(vec3 edge_bias, vec3 normal, vec3 nNormal)
+    {
+        float normal_diff = dot(normal - nNormal, edge_bias);
+        float normalIndicator = clamp(smoothstep(-.01, .01, normal_diff), 0.0, 1.0);
+        return distance(normal, nNormal) *  normalIndicator;
+    }
+
+void main()
+{
+    vec2 resolution = vec2(800.0, 600.0);
+    vec2 texelSize = vec2(1.0) / resolution;
+    vec2 uv = gl_FragCoord.xy / resolution;
+
+    float depth = texture(g_depth, TexCoord).r;
+    float linDepth = linear_depth(depth, nearPlane, farPlane);
+
+    vec3 normal_texture = texture(g_normal, TexCoord).rgb;
+    FragColor = vec4(normal_texture, 1.0);
+
+    vec3 normal = GetNormal(uv, g_normal);
+
+    vec3 normal_left = GetNormal(uv + vec2(-1.0, 0.0) * texelSize, g_normal).rgb;
+    vec3 normal_right = GetNormal(uv + vec2(1.0, 0.0) * texelSize, g_normal).rgb;
+    vec3 normal_top = GetNormal(uv + vec2(0.0, -1.0) * texelSize, g_normal).rgb;
+    vec3 normal_bottom = GetNormal(uv + vec2(0.0, +1.0) * texelSize, g_normal).rgb;
+
+    float normal_diff = 0.0;
+    vec3 bias = vec3(1.0, 1.0, 1.0);
+    normal_diff += normal_edges_bias(bias, normal, normal_left);
+    normal_diff += normal_edges_bias(bias, normal, normal_right);
+    normal_diff += normal_edges_bias(bias, normal, normal_top);
+    normal_diff += normal_edges_bias(bias, normal, normal_bottom);
+
+	FragColor = vec4(vec3(normal_diff), 1.0);
+
+
+
+    //FragColor = vec4(texture(g_color, TexCoord).rgb, 1.0);
+
+
+}#version 300 es
+
+layout(location = 0) in vec2 pos;
+layout(location = 1) in vec2 tex;
+
+out vec2 TexCoord;
+
+void main() {
+    TexCoord = tex;
+    gl_Position = vec4(pos, 0.0, 1.0);
+}#version 300 es
+
+layout (location = 0) in vec3 pos;
+layout (location = 1) in vec3 norm;
+layout (location = 2) in vec2 tex;
+layout (location = 3) in vec3 colors;
+
+uniform mat4 projection;
+uniform mat4 view;
+uniform mat4 model;
+
+out vec3 FragPos;
+out vec3 Normal;
+out vec2 TexCoord;
+out vec3 VertexColor;
+
+void main()
+{
+    FragPos = vec3(model * vec4(pos, 1.0));
+    gl_Position = projection * view * model * vec4(pos, 1.0);
+    TexCoord = tex;
+    Normal = normalize(mat3(transpose(inverse(view  * model))) * norm);
+    VertexColor = colors;
+}
